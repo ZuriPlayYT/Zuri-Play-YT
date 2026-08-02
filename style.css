@@ -1,0 +1,305 @@
+
+/* style.css - Стили для сайта Minecraft сервера */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a2e;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ШАПКА САЙТА */
+header {
+    background: linear-gradient(135deg, #0f3460, #16213e);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #e94560;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.server-version {
+    font-size: 1.3em;
+    background: rgba(233, 69, 96, 0.3);
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* IP АДРЕС */
+.ip-box {
+    background: rgba(22, 33, 62, 0.9);
+    padding: 20px 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 0;
+    border: 2px solid #e94560;
+    transition: all 0.3s;
+}
+
+.ip-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(233, 69, 96, 0.5);
+}
+
+.ip-label {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.ip-address {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #e94560;
+    font-family: 'Courier New', monospace;
+}
+
+/* СТАТУС СЕРВЕРА */
+.status {
+    margin-top: 20px;
+}
+
+.status-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background: #4CAF50;
+    box-shadow: 0 0 15px #4CAF50;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* ОСНОВНОЙ КОНТЕНТ */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #e94560;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #e94560;
+    margin: 15px auto;
+}
+
+/* КАРТОЧКИ ШАГОВ */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background: rgba(22, 33, 62, 0.8);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid rgba(233, 69, 96, 0.2);
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border-color: #e94560;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #e94560;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.step-card h3 {
+    color: #e94560;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+/* КНОПКИ */
+.btn {
+    display: inline-block;
+    background: #e94560;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c73e54;
+    transform: scale(1.05);
+}
+
+/* ПРАВИЛА */
+.rules-box {
+    background: rgba(22, 33, 62, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    border-left: 5px solid #e94560;
+}
+
+.rules-box ol {
+    list-style-position: inside;
+    font-size: 1.2em;
+    line-height: 2.5;
+}
+
+.rules-box li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* КОМАНДЫ */
+.commands-box {
+    background: rgba(22, 33, 62, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.commands-box p {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 1.1em;
+}
+
+.commands-box strong {
+    color: #e94560;
+    font-family: 'Courier New', monospace;
+}
+
+/* НАВИГАЦИЯ */
+nav {
+    background: rgba(15, 52, 96, 0.95);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: #e94560;
+}
+
+/* ПОДВАЛ */
+footer {
+    background: #0f3460;
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+    color: #888;
+}
+
+/* ДОНАТ КАРТОЧКИ */
+.donate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.donate-card {
+    background: rgba(22, 33, 62, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.donate-card:hover {
+    transform: translateY(-10px);
+}
+
+.donate-card.vip { border-top: 5px solid #CD7F32; }
+.donate-card.premium { border-top: 5px solid #C0C0C0; }
+.donate-card.legend { border-top: 5px solid #FFD700; }
+
+.donate-title {
+    font-size: 1.8em;
+    color: #e94560;
+    margin-bottom: 10px;
+}
+
+.donate-price {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.donate-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.donate-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.donate-features li::before {
+    content: "✓ ";
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media (max-width: 768px) {
+    h1 { font-size: 2em; }
+    .ip-address { font-size: 1.5em; }
+    h2 { font-size: 1.8em; }
+}

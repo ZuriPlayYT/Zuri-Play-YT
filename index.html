@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server 1.12.2 - Бесплатный вход</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- НАВИГАЦИЯ -->
+    <nav>
+        <a href="index.html">🏠 Главная</a>
+        <a href="rules.html">📜 Правила</a>
+        <a href="donate.html">💎 Донат</a>
+        <a href="#commands">💻 Команды</a>
+    </nav>
+    
+    <!-- ШАПКА -->
+    <header>
+        <h1>🎮 MINECRAFT СЕРВЕР 1.12.2</h1>
+        <div class="server-version">Для TLauncher • Бесплатный вход • Версия 1.12.2</div>
+        
+        <div class="ip-box" onclick="copyIP()" title="Нажмите чтобы скопировать IP">
+            <div class="ip-label">IP адрес сервера (нажмите для копирования):</div>
+            <div class="ip-address">localhost:25565</div>
+        </div>
+        
+        <div class="status">
+            <span class="status-dot"></span>
+            <span>Сервер онлайн • Игроков: <strong>0/20</strong></span>
+        </div>
+    </header>
+    
+    <!-- КОНТЕНТ -->
+    <div class="container">
+        <!-- КАК НАЧАТЬ ИГРАТЬ -->
+        <section>
+            <h2>📋 Как начать играть?</h2>
+            
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Скачайте TLauncher</h3>
+                    <p>Загрузите лаунчер с официального сайта tlauncher.org</p>
+                    <a href="https://tlauncher.org/" class="btn" target="_blank">Скачать TLauncher</a>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Настройте лаунчер</h3>
+                    <p>Выберите версию 1.12.2<br>Введите ЛЮБОЙ никнейм<br>Пароль НЕ НУЖЕН</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Заходите на сервер</h3>
+                    <p>Добавьте сервер с IP:<br><strong>localhost:25565</strong><br>и начните играть!</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ПРАВИЛА -->
+        <section>
+            <h2>⚠️ Основные правила</h2>
+            <div class="rules-box">
+                <ol>
+                    <li>Запрещено использование читов и хаков (X-Ray, автокликеры и др.)</li>
+                    <li>Уважайте других игроков, не оскорбляйте</li>
+                    <li>Не гриферите чужие постройки</li>
+                    <li>Не используйте баги игры в своих целях</li>
+                    <li>Не просите права администратора</li>
+                    <li>Слушайтесь модераторов и администрацию</li>
+                </ol>
+            </div>
+        </section>
+        
+        <!-- КОМАНДЫ -->
+        <section id="commands">
+            <h2>💻 Основные команды</h2>
+            <div class="commands-box">
+                <p><strong>/spawn</strong> — Телепортация на спавн</p>
+                <p><strong>/home</strong> — Телепортация к точке дома</p>
+                <p><strong>/sethome</strong> — Установить точку дома</p>
+                <p><strong>/tpa [ник]</strong> — Запрос на телепортацию к игроку</p>
+                <p><strong>/msg [ник] [сообщение]</strong> — Отправить личное сообщение</p>
+                <p><strong>/help</strong> — Показать список всех команд</p>
+                <p><strong>/rules</strong> — Показать правила сервера</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- ПОДВАЛ -->
+    <footer>
+        <p>© 2024 Minecraft Server 1.12.2 | TLauncher | Бесплатный сервер</p>
+        <p style="color: #e94560; margin-top: 10px;">Не является официальным сервером Mojang</p>
+    </footer>
+    
+    <script>
+        // Копирование IP адреса при клике
+        function copyIP() {
+            var temp = document.createElement('textarea');
+            temp.value = 'localhost:25565';
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+            alert('✅ IP скопирован: localhost:25565\n\nВставьте его в TLauncher!');
+        }
+    </script>
+</body>
+</html>
